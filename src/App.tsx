@@ -10,7 +10,6 @@ function App() {
       <div className="mt-10">
         <BalanceComponent />
         <GraphComponent />
-       
       </div>
       
     </>

@@ -3,6 +3,7 @@ import { RootState } from "../../Redux/Store";
 import { Bar} from "react-chartjs-2";
 import { useMemo } from "react";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, BarElement, Title, Tooltip, Legend, Filler } from "chart.js";
+import TodayExpense from "../TodayExpense/TodayExpense";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, BarElement, Title, Tooltip, Legend, Filler);
 interface GraphDataPoint {
@@ -72,7 +73,9 @@ const GraphComponent = () => {
     <div className="flex justify-center items-center m-5">
     <div className="card w-full max-w-2xl bg-white text-neutral-content p-3">
      <Bar data={data} options={options} />
+     <TodayExpense/>
     </div>
+    
     </div>
 
   );

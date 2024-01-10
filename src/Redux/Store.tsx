@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import balanceReducer from './BalanceSlice';
 import graphDataReducer from './GraphDataSlice';
 import todayExpenseReducer from './TodayExpenseSlice';
-import variationPercentageReducer from './VariationPercentageSlice';
+
 
 
 const store = configureStore({
@@ -10,7 +10,7 @@ const store = configureStore({
     balance: balanceReducer,
     graphData: graphDataReducer,
     todayExpense: todayExpenseReducer,
-    variationPercentage: variationPercentageReducer
+    
   },
 });
 
