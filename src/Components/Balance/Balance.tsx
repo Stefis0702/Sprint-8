@@ -15,7 +15,7 @@ const BalanceComponent: React.FC = () => {
   );
 
   return (
-    <div className="flex justify-center items-center h-screen ">
+    <div className="flex justify-center items-center  ">
   <div className="card w-full max-w-2xl  bg-orange-600 text-neutral-content p-3">
     <div className="card-body grid grid-cols-2">
       <div>
