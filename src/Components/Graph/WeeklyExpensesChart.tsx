@@ -1,22 +1,43 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/Store";
-import { Bar} from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { useMemo } from "react";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, BarElement, Title, Tooltip, Legend, Filler } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+} from "chart.js";
 import TodayExpense from "../TodayExpense/TodayExpense";
+import { useTranslation } from 'react-i18next';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, BarElement, Title, Tooltip, Legend, Filler);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 interface GraphDataPoint {
   day: string;
   value: number;
 }
 
 const GraphComponent = () => {
- 
+  const { t } = useTranslation();
   const balancesByWeek = useSelector(
     (state: RootState) => state.balance.balancesByWeek
   );
-  const firstWeekData = balancesByWeek&&balancesByWeek.length > 0 ? balancesByWeek[0] : {};
+  const firstWeekData =
+    balancesByWeek && balancesByWeek.length > 0 ? balancesByWeek[0] : {};
 
   const graphData: GraphDataPoint[] = useMemo(() => {
     const daysOfWeek = Object.keys(firstWeekData);
@@ -62,22 +83,22 @@ const GraphComponent = () => {
         grid: {
           display: false,
         },
+        ticks: {
+          maxTicksLimit: 4, 
+        },
       },
     },
-  
     
-  
-  }
+  };
 
   return (
-    <div className="flex justify-center items-center m-5">
-    <div className="card w-full max-w-2xl bg-white text-neutral-content p-3">
-     <Bar data={data} options={options} />
-     <TodayExpense/>
+    <div className="flex justify-center items-center m-8">
+      <div className="card w-full max-w-2xl bg-white text-neutral-content p-3">
+        <h2 className="text-3xl text-center  font-bold text-black">{t('main.Despeses- Ultima Setmana')}</h2>
+        <Bar data={data} options={options} />
+        <TodayExpense />
+      </div>
     </div>
-    
-    </div>
-
   );
 };
 

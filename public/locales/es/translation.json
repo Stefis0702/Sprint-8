@@ -1,0 +1,21 @@
+{
+    "main": {
+      
+      "Balanç total": "Balance total",
+      "Setmana": "Semana",
+      "Despeses - Última setmana": "Gastos - Última semana",
+      
+      "Despeses avui": "Gastos-hoy",
+      "week-days": {
+        "dilluns": "Lunes",
+        "dimarts": "Martes",
+        "dimecres": "Miercoles",
+        "dijous": "Jueves",
+        "divendres": "Viernes",
+        "dissabte": "Sabado",
+        "diumenge": "Domingo"
+      },
+      
+      "respecte a ahir": "respecto ayer"
+    }
+  }
