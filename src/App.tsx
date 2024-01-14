@@ -1,5 +1,4 @@
 import { Suspense} from 'react'
-// import { useTranslation } from 'react-i18next'
 import './App.css'
 import BalanceComponent from './Components/Balance/Balance'
 import GraphComponent from './Components/Graph/WeeklyExpensesChart'
@@ -7,7 +6,7 @@ import GraphComponent from './Components/Graph/WeeklyExpensesChart'
 
 function App() {
   
-  // const { t, i18n } = useTranslation();
+
 
   
 

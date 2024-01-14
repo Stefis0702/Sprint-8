@@ -4,12 +4,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 
 
-interface WeekBalance {
+ export interface WeekBalance {
   [day: string]: number;
 }
 
 interface BalanceState {
-  balancesByWeek: WeekBalance[]
+  balancesByWeek: WeekBalance[],
+  currentWeek: number;
 }
 
 const initialState: BalanceState = {
@@ -44,6 +45,8 @@ const initialState: BalanceState = {
 
 
   ]
+  ,
+  currentWeek: 0,
 };
 
 
@@ -53,13 +56,24 @@ const initialState: BalanceState = {
       reducers: {
         setBalanceForWeek(state, action: PayloadAction<{ weekIndex: number; newWeekBalance: WeekBalance }>) {
           const { weekIndex, newWeekBalance } = action.payload;
-          if (state.balancesByWeek[weekIndex]) {
-            state.balancesByWeek[weekIndex] = newWeekBalance;
-          }
+          
+          return {
+            ...state,
+            balancesByWeek: state.balancesByWeek.map((week, index) =>
+              index === weekIndex ? newWeekBalance : week
+            ),
+          };
         },
-        
+        setCurrentWeek(state, action: PayloadAction<number>) {
+         
+          return {
+            ...state,
+            currentWeek: action.payload,
+          };
+        },
       },
     });
+
     
-    export const { setBalanceForWeek } = balanceSlice.actions;
+    export const { setBalanceForWeek, setCurrentWeek } = balanceSlice.actions;
     export default balanceSlice.reducer;

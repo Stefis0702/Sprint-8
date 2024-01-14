@@ -1,5 +1,5 @@
 
-import balanceReducer, { setBalanceForWeek } from '../../Redux/BalanceSlice';
+import balanceReducer,{ setBalanceForWeek, setCurrentWeek } from '../../Redux/BalanceSlice';
 
 describe('balanceSlice reducer', () => {
   const initialState = {
@@ -33,9 +33,10 @@ describe('balanceSlice reducer', () => {
       },
       
     ],
+    currentWeek: 0,
   };
 
-  it('should handle setting balance for a specific week', () => {
+  it('should handle setting balance for the current week when changing weeks', () => {
     const newWeekBalance = {
       Monday: 100,
       Tuesday: 200,
@@ -45,11 +46,15 @@ describe('balanceSlice reducer', () => {
       Saturday: 600,
       Sunday: 700,
     };
-
-    const action = setBalanceForWeek({ weekIndex: 1, newWeekBalance });
-    const state = balanceReducer(initialState, action);
-
-    expect(state.balancesByWeek[1]).toEqual(newWeekBalance);
+  
+    
+    const changeWeekAction = setCurrentWeek(1);
+    const setBalanceAction = setBalanceForWeek({ weekIndex: 1, newWeekBalance });
+  
+    const stateAfterChangeWeek = balanceReducer(initialState, changeWeekAction);
+    const stateAfterSetBalance = balanceReducer(stateAfterChangeWeek, setBalanceAction);
+  
+    expect(stateAfterSetBalance.balancesByWeek[1]).toEqual(newWeekBalance);
   });
 
   it('should handle setting balance for a non-existing week index', () => {

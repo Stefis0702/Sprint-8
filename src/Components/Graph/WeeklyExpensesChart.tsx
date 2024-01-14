@@ -36,15 +36,20 @@ const GraphComponent = () => {
   const balancesByWeek = useSelector(
     (state: RootState) => state.balance.balancesByWeek
   );
-  const firstWeekData =
-    balancesByWeek && balancesByWeek.length > 0 ? balancesByWeek[0] : {};
+  const currentWeek = useSelector((state: RootState) => state.balance.currentWeek);
+  
 
   const graphData: GraphDataPoint[] = useMemo(() => {
-    const daysOfWeek = Object.keys(firstWeekData);
+    const currentWeekData =
+      balancesByWeek && balancesByWeek.length > 0
+        ? balancesByWeek[currentWeek]
+        : {};
+
+    const daysOfWeek = Object.keys(currentWeekData);
 
     const processedData = daysOfWeek.map((day) => ({
       day,
-      value: firstWeekData[day],
+      value: currentWeekData[day],
     }));
 
     return processedData;
