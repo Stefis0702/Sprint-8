@@ -2,6 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 
 
+
+
 interface WeekBalance {
   [day: string]: number;
 }

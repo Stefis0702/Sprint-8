@@ -50,8 +50,14 @@ const GraphComponent = () => {
     return processedData;
   }, [balancesByWeek]);
 
+  const daysOfWeek = ["dilluns", "dimarts", "dimecres", "dijous", "divendres", "dissabte", "diumenge"];
+
+  const labelsTranslate = daysOfWeek.map(day => t(`main.Week-days.${day}`));
+  
+  console.log(labelsTranslate);
+
   const data = {
-    labels: graphData.map((dataPoint) => dataPoint.day),
+    labels: labelsTranslate,
     datasets: [
       {
         label: "Balance Diario",
@@ -94,7 +100,7 @@ const GraphComponent = () => {
   return (
     <div className="flex justify-center items-center m-8">
       <div className="card w-full max-w-2xl bg-white text-neutral-content p-3">
-        <h2 className="text-3xl text-center  font-bold text-black">{t('main.Despeses- Ultima Setmana')}</h2>
+        <h2 className="text-3xl text-center  font-bold text-black">{t('main.Tittle')}</h2>
         <Bar data={data} options={options} />
         <TodayExpense />
       </div>

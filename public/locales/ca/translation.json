@@ -3,17 +3,17 @@
       
       "Balanç total": "Balanç total",
       "Setmana": "Setmana",
-      "Despeses - Última setmana": "Despeses - Última setmana",
+      "Tittle": "Despeses - Última setmana",
       
       "Despeses avui": "Despeses avui",
-      "week-days": {
-        "dilluns": "dilluns",
-        "dimarts": "dimarts",
-        "dimecres": "dimecres",
-        "dijous": "dijous",
-        "divendres": "divendres",
-        "dissabte": "dissabte",
-        "diumenge": "diumenge"
+      "Week-days": {
+        "dilluns": "Dilluns",
+        "dimarts": "Dimarts",
+        "dimecres": "Dimecres",
+        "dijous": "Dijous",
+        "divendres": "Divendres",
+        "dissabte": "Dissabte",
+        "diumenge": "Diumenge"
       },
       
       "respecte a ahir": "respecte a ahir"

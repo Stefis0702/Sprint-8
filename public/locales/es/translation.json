@@ -3,10 +3,10 @@
       
       "Balanç total": "Balance total",
       "Setmana": "Semana",
-      "Despeses - Última setmana": "Gastos - Última semana",
+      "Tittle": "Gastos - Última semana",
       
       "Despeses avui": "Gastos-hoy",
-      "week-days": {
+      "Week-days": {
         "dilluns": "Lunes",
         "dimarts": "Martes",
         "dimecres": "Miercoles",
