@@ -20,9 +20,10 @@ https://sprint-8-jade.vercel.app/
   `npm run dev`
 
 ### Stack Tecnológico
-Lenguaje de Programación: JavaScript/TypeScript 
-Framework Frontend: React
-Control de Versiones: Git
+- Lenguaje de Programación: JavaScript/TypeScript
+- Framework Frontend: React
+- Estilos CSS: Tailwind CSS (daisyUi)
+- Control de Versiones: Git
 
 ### Test en Jest
 Cada funcionalidad implementada incluye pruebas en Jest para garantizar su integridad.
