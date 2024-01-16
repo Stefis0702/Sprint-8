@@ -37,6 +37,8 @@ const GraphComponent = () => {
     (state: RootState) => state.balance.balancesByWeek
   );
   const currentWeek = useSelector((state: RootState) => state.balance.currentWeek);
+  const isFirstWeek = currentWeek === 0;
+  const isLastWeek = currentWeek === balancesByWeek.length - 1;
   
 
   const graphData: GraphDataPoint[] = useMemo(() => {
@@ -105,7 +107,8 @@ const GraphComponent = () => {
   return (
     <div className="flex justify-center items-center m-8">
       <div className="card w-full max-w-2xl bg-white text-neutral-content p-3">
-        <h2 className="text-3xl text-center  font-bold text-black">{t('main.Tittle')}</h2>
+        <h2 className="text-3xl text-center  font-bold text-black">
+           {isFirstWeek ? t('main.FirstWeekTitle') : isLastWeek ? t('main.Tittle'):t('main.RegularSetmana')}</h2>
         <Bar data={data} options={options} />
         <TodayExpense />
       </div>
