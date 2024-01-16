@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
+# Inprocode
+es una aplicación que te ayuda a gestionar y visualizar tus gastos diarios y semanales de manera efectiva.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Características Clave
+Gestión de Gastos: Registra y categoriza tus gastos diarios.
+Visualización Gráfica: Utiliza gráficos interactivos para mostrar tus gastos semanales.
+Multilingüismo: Soporte para varios idiomas, permitiéndote cambiar el idioma de la interfaz.
 
-Currently, two official plugins are available:
+## Demo
+https://sprint-8-jade.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Cómo Iniciar el Proyecto
+1. Clona este repositorio 
+   "git clone https://github.com/usuario/nombre-repositorio.git"
+2. Navega a la carpeta del proyecto.
+  cd nombre-repositorio
+3. Instala las dependencias 
+   `npm install`
+4. Ejecuta el programa
+  `npm run dev`
 
-## Expanding the ESLint configuration
+## Stack Tecnológico
+Lenguaje de Programación: JavaScript/TypeScript 
+Framework Frontend: React
+Control de Versiones: Git
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Test en Jest
+Cada funcionalidad implementada incluye pruebas en Jest para garantizar su integridad.
 
-- Configure the top-level `parserOptions` property like this:
+## Multilingüismo
+Implementación de múltiples idiomas utilizando la librería i18n.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Despliegue en Vercel
+Proyecto desplegado en Vercel, con pipelines de GitHub para garantizar un proceso de build suave.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
-DemoApp: https://sprint-8-jade.vercel.app/
