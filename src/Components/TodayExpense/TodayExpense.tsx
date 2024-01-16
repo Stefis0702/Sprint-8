@@ -28,6 +28,7 @@ const TodayVariation = () => {
   }, [currentWeek, balancesByWeek]);
 
   const variation = calculateVariation(expensesToday, expensesYesterday);
+  const sign= variation > 0 ? "+" : ""
 
   return (
     <div className='flex justify-between items-center border-t-4 rounded-t border-gray-300 my-4 m-6'>
@@ -36,7 +37,7 @@ const TodayVariation = () => {
         <p className="text-5xl font-bold text-black"> {expensesToday}€</p>
       </div>
       <div className="flex flex-col items-end">
-        <p className="text-2xl font-bold text-black">{variation.toFixed(2)}%</p>
+        <p className="text-2xl font-bold text-black">{sign}{variation.toFixed(2)}%</p>
         <p className="text-2xl font-bold text-black">{t('main.respecte a ahir')}</p>
       </div>
     </div>
