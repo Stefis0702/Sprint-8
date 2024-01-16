@@ -1,15 +1,15 @@
-# Inprocode
-es una aplicación que te ayuda a gestionar y visualizar tus gastos diarios y semanales de manera efectiva.
+# Inprocode 
+Es una aplicación que te ayuda a gestionar y visualizar tus gastos diarios y semanales de manera efectiva.
 
-## Características Clave
+### Características Clave
 Gestión de Gastos: Registra y categoriza tus gastos diarios.
 Visualización Gráfica: Utiliza gráficos interactivos para mostrar tus gastos semanales.
 Multilingüismo: Soporte para varios idiomas, permitiéndote cambiar el idioma de la interfaz.
 
-## Demo
+### Demo
 https://sprint-8-jade.vercel.app/
 
-## Cómo Iniciar el Proyecto
+### Cómo Iniciar el Proyecto
 1. Clona este repositorio 
    "git clone https://github.com/Stefis0702/Sprint-8.git"
 2. Navega a la carpeta del proyecto.
@@ -19,18 +19,18 @@ https://sprint-8-jade.vercel.app/
 4. Ejecuta el programa
   `npm run dev`
 
-## Stack Tecnológico
+### Stack Tecnológico
 Lenguaje de Programación: JavaScript/TypeScript 
 Framework Frontend: React
 Control de Versiones: Git
 
-## Test en Jest
+### Test en Jest
 Cada funcionalidad implementada incluye pruebas en Jest para garantizar su integridad.
 
-## Multilingüismo
+### Multilingüismo
 Implementación de múltiples idiomas utilizando la librería i18n.
 
-## Despliegue en Vercel
+### Despliegue en Vercel
 Proyecto desplegado en Vercel, con pipelines de GitHub para garantizar un proceso de build suave.
 
 
