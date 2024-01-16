@@ -11,9 +11,9 @@ https://sprint-8-jade.vercel.app/
 
 ## Cómo Iniciar el Proyecto
 1. Clona este repositorio 
-   "git clone https://github.com/usuario/nombre-repositorio.git"
+   "git clone https://github.com/Stefis0702/Sprint-8.git"
 2. Navega a la carpeta del proyecto.
-  cd nombre-repositorio
+  cd Sprint-8
 3. Instala las dependencias 
    `npm install`
 4. Ejecuta el programa
